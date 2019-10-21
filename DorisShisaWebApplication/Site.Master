@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DorisShisaWebApplication.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>sishanyama.co.za</title>
+	<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+	<script type="text/javascript" src="Scripts/menu.js"></script>
+	<script type="text/javascript" src="Scripts/slideshow.js"></script>
+	<script type="text/javascript" src="Scripts/cufon-yui.js"></script>
+	<script type="text/javascript" src="Scripts/Arial.font.js"></script>
+	<script type="text/javascript">
+	    Cufon.replace('h1,h2,h3,h4,h5,#menu,#copy,.blog-date');
+	</script>
+	<script type="text/javascript" src="Scripts/fancyzoom.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	    $(document).ready(function () {
+	        $('div.photo a').fancyZoom({ directory: 'images/zoom', scaleImg: true, closeOnClick: true });
+	    });
+	</script>
+	<link rel="stylesheet" href="Styles/main.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="bg">
+		<div class="wrap">
+			
+			<!-- logo -->
+			<h1><a href="homepage.aspx">Doris's Shisanyama</a></h1>
+			<!-- /logo -->
+		<!-- menu -->
+			<div id="mainmenu">
+				<ul id="menu">
+					 <li><a href = "Default.aspx">Home</a></li>
+                   <li><a href = "Promotions.aspx">Promotions</a></li>
+					<li><a href="Menu.aspx">Menu</a></li>
+					<li><a href="Booking.aspx">Booking</a></li>
+					<li><a href="ContactUs.aspx">Contact Us</a></li>
+                    <li><a href = "Register.aspx">Register</a></li>
+					<li><a href="Login.aspx">Login</a></li>
+                    
+				</ul>
+			</div>
+			<!-- /menu --	
+			
+<!-- pitch -->
+			<div id="pitch">
+				<div id="slideshow">
+					
+					<!-- 1st frame -->
+					<div class="active">
+						<img src="images/rib.jpg" alt="" height="280" />
+						<div class="overlay transparent">
+							<h2>Rib night</h2>
+							<p>Rib night starts at 11:00 till close of business day sunday..... enjoy our quick family dinner nights with us, R50 a rack</p>
+						</div>
+						<p class="arrow"><a href="#"></a></p>
+					</div>
+					<!-- /1st frame -->
+					
+					<!-- 2nd frame -->
+					<div>
+						<img src="images/newBanner03-1024x320.jpg" alt="" height="280" width="895" />
+						<div class="overlay transparent">
+							<h2>For Reservations</h2>
+							<p>Call 011 0997128.</p>
+						</div>
+						<p class="arrow"><a href="#"></a></p>
+					</div>
+					<!-- /2nd frame -->
+					
+					<!-- 3rd frame -->
+					<div>
+						<img src="images/breakfast3.png" alt="" height="280" width="895" />
+						<div class="overlay transparent">
+							<h2>Open from 6:30am for breakfast and 7:00am on weekends</h2>
+						</div>
+						<p class="arrow"><a href="#"></a></p>
+					</div>
+					<!-- 3rd frame -->
+					
+				</div>
+			</div>
+			<!-- /pitch -->
+
+
+            </div>
+
+        </div>
+
+   <form id="Form2" runat="server">
+         <div class="wrap">
+       
+<div id="main">
+
+                 <table><tr><td style="color: #000000; font-weight: bold"><asp:Label ID="Label1" runat="server" Text="Enter your Email to receive our Promotions" TabIndex="2"></asp:Label>&nbsp;&nbsp; </td> <td>
+                <asp:TextBox ID="txtemail" runat="server" Height="23px" TextMode="Email" Width="197px"></asp:TextBox>&nbsp;&nbsp</td><td>
+                    <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" Width="87px" /></td>
+           
+               </tr><tr>
+
+                            <td colspan="3" align:="center">
+
+                                <asp:Label ID="LabelMessage" ForeColor="Green" runat="server" EnableViewState="True"
+
+                                    Visible="True"></asp:Label><br/>
+
+                            </td>
+
+                        </tr></table>
+        </div>
+                    </div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+              
+               </asp:ContentPlaceHolder>
+        
+    </form>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+
+    
+			
+    
+				
+		<!-- footer -->
+		<div id="footer">
+			<div id="footerbg">
+				<div class="wrap">
+				
+					<!-- footer links -->
+					<p id="footer_menu">
+						<a href="#">Jobs @ Doris's Sishanyama</a>
+						<a href="#">Joburg news</a>
+						<a href="#">Terms and Conditions</a>
+						
+						
+					</p>
+					<!-- /footer links -->
+					
+					<p id="copy">Doris's<span>Sishanyama</span></p>
+					
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /footer -->
+
+
+
+
+</body>
+</html>

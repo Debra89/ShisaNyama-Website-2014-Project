@@ -1,0 +1,190 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="DorisShisaWebApplication.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <script type="text/javascript" src='<%=ResolveUrl("Scripts/jquery-1.4.2.min.js") %>'></script>
+
+<script type="text/javascript" src='<%=ResolveUrl("Scripts/ddaccordion.js") %>'>
+
+    /***********************************************
+    * Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+    * Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+    * This notice must stay intact for legal use
+    ***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+    //Initialize Arrow Side Menu:
+    ddaccordion.init({
+        headerclass: "menuheaders", //Shared CSS class name of headers group
+        contentclass: "menucontents", //Shared CSS class name of contents group
+        revealtype: "clickgo", //Reveal content when user clicks or onmouseover the header? Valid value: "click", or "mouseover"
+        mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+        collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+        defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content.
+        onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+        animatedefault: false, //Should contents open by default be animated into view?
+        persiststate: true, //persist state of opened contents within browser session?
+        toggleclass: ["unselected", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+        togglehtml: ["none", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+        animatespeed: 500, //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+        oninit: function (expandedindices) { //custom code to run when headers have initalized
+            //do nothing
+        },
+        onopenclose: function (header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
+            //do nothing
+        }
+    })
+
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Administrator</title>
+
+<meta name="Description" content="..." />
+<meta name="Keywords" content="..." />
+<meta name="robots" content="all,follow" />
+<meta name="author" content="..." />
+
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="styles/style.css" type="text/css" media="screen, projection, tv" />
+
+<link rel="Stylesheet" href="styles/VerticalMenu.css" type="text/css" />
+  <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>  
+</head>
+<body>
+   <form id="Form1" runat="server">
+        <div id="header">
+           <h2 style="left: 90px; color: #FFFFFF;">Doris Shisanyama</h2>
+	    </div> 
+
+<!-- Menu -->
+
+	<div id="menu-box" class="cleaning-box">
+	<a href="#skip-menu" class="hidden">Skip menu</a>
+		<ul id="menu">
+			<li><a href="AdminHome.aspx">Home</a></li>
+			<li><a href="#">Admin Rules</a></li>
+			
+			<li><a href="#">update details</a></li>
+            <li><a href="#">Change Password</a></li>
+			<li><a href="#">Contact us</a></li>
+            <li style="color: #FFFFFF">signed as: <asp:Label ID="welcome" runat="server" Text="Label" ForeColor="White"></asp:Label></li>
+            <li><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></li>
+		</ul>
+	</div>
+    
+	<!-- Menu end -->
+
+<hr class="noscreen" />
+
+<div id="skip-menu"></div>
+	<div class="content">
+		<div class="content-in">
+			<div class="column-left">
+				<div class="column-left-in">
+					<div class="arrowsidemenu">
+<div class=""><a href="AdminHome.aspx" title="CSS">Welcome Page</a></div>  
+	
+            
+		
+	<div class="menuheaders"><a href="#" title="JavaScript">Manage employees</a></div>
+		<ul class="menucontents">
+            <li><a href="AdminAddEmployees.aspx">Add new employee</a></li>
+            <li><a href="AdminDeleteEmployees.aspx">Delete employee</a></li>
+            <li><a href="AdminUpdateEmployees.aspx">Update employee</a></li>
+		</ul>
+    <div class="menuheaders"><a href="#" title="JavaScript">Manage products</a></div>
+		<ul class="menucontents">
+        
+         <li><a href="AdminAddProducts.aspx">Add new Products</a></li>
+            <li><a href="AdminDeleteProducts.aspx">Delete Products</a></li>
+            <li><a href="AdminUpdateProducts.aspx">Update Products</a></li>
+            
+		</ul>
+    <div class="menuheaders"><a href="#" title="JavaScript">Assign tasks</a></div>
+		<ul class="menucontents">
+            <li><a href="AdminAssignBookingTask.aspx">Assign Employees to bookings</a></li>
+            <li><a href="AdminViewAssignedBookingTask.aspx">View Assigned booking and delete</a></li>
+            <li><a href="AdminAssignOrderTask.aspx">Assign Employees to orders</a></li>
+            <li><a href="AdminViewAssignedOrderTask.aspx">View Assigned Order and delete</a></li>
+         </ul>	
+
+	<div class="menuheaders"><a href="#" title="JavaScript">Website statistics reports</a></div>
+		<ul class="menucontents">
+        <li><a href="RegisteredUsersReport.aspx">Registered users on website</a></li>
+            <li><a href="ReportActivityLogs.aspx">Website activity logs</a></li>
+            <li><a href="ReportPageVisits.aspx">Number of visits report</a></li>
+             <li><a href="ReportSubscribers.aspx">Number of promotion subscribers</a></li>
+
+     
+         </ul>
+           <div class="menuheaders"><a href="#" title="JavaScript">Doris Shisanyama Reports</a></div>
+		<ul class="menucontents">
+            <li><a href="ReportBooking.aspx">Bookings Reports</a></li>
+            <li><a href="ReportOrder.aspx">Order reports</a></li>    
+            <li><a href="ReportMostOrderedFood.aspx">Most Ordered food</a></li> 
+            <li><a href="ReportMostViewedPage.aspx">Most viewed page</a></li>
+            
+         </ul>
+    	<div class="menuheaders"><a href="#" title="JavaScript">Business Review</a></div>
+		<ul class="menucontents">
+            <li><a href="ReportBusinessReview.aspx">Business Review</a></li>
+            
+         </ul>
+      
+	
+	<div class=""><a href="Logout.aspx" title="JavaScript">Logout</a></div>
+</div>
+                    </div> <!-- Column left in end -->
+			</div> <!-- Column left end -->
+
+<hr class="noscreen" />
+
+			<div class="column-right">
+				<div class="column-right-in">
+					
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+					
+				</div> <!-- Column right in end -->
+			</div> <!-- Column right end -->
+
+		</div> <!-- Content in end -->
+		<div class="cleaner">&nbsp;</div>
+	</div> <!-- Content end -->
+
+<!-- footer -->
+		<div id="footer">
+			<div id="footerbg">
+				<div class="wrap">
+				
+					<!-- footer links -->
+					<p id="footer_menu">
+						<a href="#">Jobs @ Doris's Sishanyama</a>
+						<a href="#">Joburg news</a>
+						<a href="#">Terms and Conditions</a>
+						
+						
+					</p>
+					<!-- /footer links -->
+					
+					<p id="copy">Doris's<span>Sishanyama</span></p>
+					
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /footer -->   
+
+
+       </form>
+</body>
+</html>

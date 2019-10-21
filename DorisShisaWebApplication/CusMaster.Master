@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CusMaster.master.cs" Inherits="DorisShisaWebApplication.CusMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>sishanyama.co.za</title>
+	<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+	<script type="text/javascript" src="Scripts/menu.js"></script>
+	<script type="text/javascript" src="Scripts/slideshow.js"></script>
+	<script type="text/javascript" src="Scripts/cufon-yui.js"></script>
+	<script type="text/javascript" src="Scripts/Arial.font.js"></script>
+	<script type="text/javascript">
+	    Cufon.replace('h1,h2,h3,h4,h5,#menu,#copy,.blog-date');
+	</script>
+	<script type="text/javascript" src="Scripts/fancyzoom.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	    $(document).ready(function () {
+	        $('div.photo a').fancyZoom({ directory: 'images/zoom', scaleImg: true, closeOnClick: true });
+	    });
+	</script>
+	<link rel="stylesheet" href="Styles/main.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="bg">
+		<div class="wrap">
+			
+			<!-- logo -->
+			<h1><a href="homepage.aspx">Doris's Shisanyama</a></h1>
+			<!-- /logo -->
+		<!-- menu -->
+			<div id="mainmenu">
+				<ul id="menu">
+					
+                   <li><a href = "CusPromotions.aspx">Promotions</a></li>
+					<li><a href="CusMenu.aspx">Menu</a></li>	
+					<li><a href="CusBooking.aspx">Booking</a></li>
+					<li><a href="CusPlaceOrder.aspx">Order</a></li>
+                    
+                    <li><a href="ChangePassword.aspx">Change Password</a></li>
+					<li><a href="UpdateDetails">Update Details</a></li>
+					<li><a href="Logout.aspx">Logout</a></li>
+                    
+				</ul>
+			</div>
+			<!-- /menu --	
+			
+<!-- pitch -->
+			<div id="pitch">
+				<div id="slideshow">
+					
+					<!-- 1st frame -->
+					<div class="active">
+						<img src="images/rib.jpg" alt="" height="280" />
+						<div class="overlay transparent">
+							<h2>Rib night</h2>
+							<p>Rib night starts at 11:00 till close of business day sunday..... enjoy our quick family dinner nights with us, R50 a rack</p>
+						</div>
+						<p class="arrow"><a href="#"></a></p>
+					</div>
+					<!-- /1st frame -->
+					
+					<!-- 2nd frame -->
+					<div>
+						<img src="images/newBanner03-1024x320.jpg" alt="" height="280" width="895" />
+						<div class="overlay transparent">
+							<h2>For Reservations</h2>
+							<p>Call 011 0997128.</p>
+						</div>
+						<p class="arrow"><a href="#"></a></p>
+					</div>
+					<!-- /2nd frame -->
+					
+					<!-- 3rd frame -->
+					<div>
+						<img src="images/breakfast3.png" alt="" height="280" width="895" />
+						<div class="overlay transparent">
+							<h2>open from 6:30am for breakfast and 7:00am on weekends</h2>
+						<%--	<p>Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>--%>
+						</div>
+						<p class="arrow"><a href="#"></a></p>
+					</div>
+					<!-- 3rd frame -->
+					
+				</div>
+			</div>
+			<!-- /pitch -->
+
+
+            </div>
+
+        </div>
+
+    <form id="Form1" runat="server">
+    
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        
+    </form>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+
+    
+				
+		<!-- footer -->
+		<div id="footer">
+			<div id="footerbg">
+				<div class="wrap">
+				
+					<!-- footer links -->
+					<p id="footer_menu">
+						<a href="#">Jobs @ Doris's Sishanyama</a>
+						<a href="#">Joburg news</a>
+						<a href="#">Terms and Conditions</a>
+						
+						
+					</p>
+					<!-- /footer links -->
+					
+					<p id="copy">Doris's<span>Sishanyama</span></p>
+					
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /footer -->
+
+
+
+
+</body>
+</html>

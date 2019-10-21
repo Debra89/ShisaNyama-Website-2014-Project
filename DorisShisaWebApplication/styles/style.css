@@ -1,0 +1,330 @@
+/*  Reference [http://www.mantisa.cz/].*/
+
+
+* { padding: 0;
+    margin-left: 0px;
+    margin-right: 0;
+    margin-top: 0px;
+}
+
+html { height: 100%; font-size: 62.5% }
+
+body {
+    border: thin groove #000000;
+    height: auto;
+    text-align: center;
+    font: 1.2em Verdana, Arial, Helvetica, sans-serif;
+    min-width: 940px;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0px 0 0 0;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 130px 0px rgba(50,48,25,0.7);
+    background-attachment: fixed;
+}
+
+a:link, a:visited {
+    color: #333333;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+
+
+.cleaning-box { 
+min-height: 1px;
+}
+
+.cleaning-box:after {
+display: block; 
+clear: both; 
+visibility: hidden; 
+height: 0; 
+font-size: 0; 
+content: ' ';
+}
+
+.noscreen {
+display: none;
+}
+
+.hidden { /* Skip menu */
+position: absolute;
+top: -10000px;
+left: 0;
+width: 1px;
+height: 1px;
+overflow: hidden;
+}
+
+.cleaner {
+clear: both;
+height: 0;
+font-size: 0;
+visibility: hidden;
+}
+
+/* Headings, paragraphs */
+
+h1 {
+    font-size: 2.4em;
+    font-weight: normal;
+    color: #000000;
+    letter-spacing: 1px;
+    padding: 22px 0 6px 0;
+    margin: 0 0 2px 15px;
+    border-bottom: 1px solid #843419;
+    width: 50%;
+    border-bottom-color: #000000;
+}
+
+h1 a:link, h1 a:visited {
+    text-decoration: none;
+    font-weight: normal;
+    color: #000000;
+}
+
+h2 {
+    font: 1.5em Georgia, "Times New Roman" , Times, serif;
+    color: #333333;
+    background-color: #C0C0C0;
+    border: 1px solid #808080;
+    padding: 2px 0 2px 9px;
+    margin-bottom: 9px;
+    letter-spacing: 1px;
+    width: 703px;
+}
+
+h3 {
+font: 1.5em Georgia, "Times New Roman", Times, serif;
+color: #3F0707;
+margin-bottom: 7px;
+}
+
+p {
+    color: #808080;
+    line-height: 2;
+    margin-bottom: 4px;
+}
+
+p.text-content {
+text-indent: 1px;
+}
+
+p.Msg
+{
+    text-align: center;
+}
+
+
+p.text-content:first-letter {
+font-size: 1.6em;
+line-height: 0.9;
+letter-spacing: 1px;
+}
+.tabledata {
+    color: #333333;
+    empty-cells: hide;
+    border-spacing: inherit;
+    width: 398px;
+}
+
+/* Header */
+
+.version {
+position: absolute;
+top: 7px;
+right: 18px;
+}
+
+.version p a, .version p a:visited {
+    color: #333333;
+    font-size: 0.8em;
+    font-weight: normal;
+    margin-right: 7px;
+}
+
+
+/* Menu */
+
+#menu-box {
+    background: #000000 url('../img/h-menu.gif') repeat-x 0 0;
+    border-bottom: 1px solid #D98242;
+    border-bottom-color: #000000;
+}
+
+#menu
+{
+    width: 939px;
+    margin: 0 0;
+    list-style: none;
+    text-align: left;
+    font: 1.2em Arial;
+    letter-spacing: 1px;
+}
+
+#menu li {
+display: inline;
+text-align: center;
+line-height: 32px;
+}
+
+#menu li a {
+    float: left;
+    display: block;
+    color: #808080;
+    font-weight: normal;
+    padding: 0 18px;
+    border-right: 1px solid #CB9C49;
+    text-decoration: none;
+    border-right-color: #C0C0C0;
+}
+
+#menu li a.first
+{
+    border-left: 1px solid #CB9C49;
+}
+
+#menu li a:hover, #menu li a.active {
+    background: #000000 repeat-x 0 0;
+}
+
+
+/* Content - columns */
+
+.content
+{
+    width: 940px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 0px;
+    height: auto;
+}
+
+.content-in
+{
+    width: 100%;
+    height: auto;
+}
+
+.column-left
+{
+    float: left;
+    width: 22%;
+    height: auto;
+}
+
+.column-right
+{
+    float: left;
+    width: 78%;
+    height: inherit;
+}
+
+.column-left-in
+{
+    margin: 0.4em 1em 0 5px;
+    height: auto;
+}
+
+.column-right-in
+{
+    margin: 0.6em 0 0 6px;
+    width: 720px;
+    height: inherit;
+}
+
+.column-right-in h3 {
+margin: 8px 0 8px 9px;
+}
+
+
+
+/* Footer */
+
+#footer-box {
+background: url('../img/footer-bg.gif') repeat-x 0 0;
+height: 100px;
+}
+
+#footer {
+width: 903px;
+margin: 0 auto;
+font: 1.2em Georgia, "Times New Roman", Times, serif;
+}
+
+#footer ul {
+list-style: none;
+padding: 27px 0 0 10px;
+text-align: left;
+font-size: 0.9em;
+float: left;
+width: 650px;
+}
+
+#footer ul li {
+float: left;
+display: inline;
+white-space: nowrap;
+}
+
+#footer ul li a, #footer ul li a:visited {
+color: #181818;
+margin: 0 8px;
+font-weight: normal;
+}
+
+#footer p.print {
+float: right;
+text-align: right;
+width: 240px;
+padding: 27px 0 0 0;
+line-height: 1;
+margin: 0;
+}
+
+#footer p.print a, #footer p.print a:visited {
+color: #181818;
+font-weight: normal;
+}
+
+#footer p#backs {
+line-height: 1;
+margin: 39px 0 0 0;
+color: #181818;
+font-size: 0.8em;
+}
+
+#footer p#backs a, #footer p#backs a:visited {
+color: #280303;
+font-weight: normal;
+padding: 0 1px;
+}
+
+#twitter
+{
+    background: url('../img/link4.png') no-repeat 0 80%;
+    padding-left: 26px;
+}
+
+#facebook
+{
+    background: url('../img/link2.png') no-repeat 0 80%;
+    padding-left: 26px;
+}
+#RSS
+{
+    background: url('../img/link3.png') no-repeat 0 80%;
+    padding-left: 26px;
+}
+
+p.Pinfo
+{
+    background: url(res/info.png) no-repeat left center;
+	padding: 8px 0 8px 20px;
+}

@@ -1,0 +1,72 @@
+﻿/*Vertical menu*/
+
+.arrowsidemenu {
+    border-left: 1px solid #94AA74;
+    border-right: 1px solid #94AA74;
+    border-top: 1px solid #94AA74;
+    border-bottom: 1px none #94AA74;
+    width: 198px; /*width of menu*/
+    background-color: #C0C0C0;
+    border-color: #808080;
+}
+	
+.arrowsidemenu div a {
+    /*header bar links*/
+    font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+    display: block;
+    background: transparent url(arrowgreen.gif) 100% 0;
+    height: 24px; /*Set to height of bg image-padding within link (ie: 32px - 4px - 4px)*/
+    padding: 4px 0 4px 10px;
+    line-height: 24px; /*Set line-height of bg image-padding within link (ie: 32px - 4px - 4px)*/
+    text-decoration: none;
+}
+	
+.arrowsidemenu div a:link, .arrowsidemenu div a:visited {
+    border-style: ridge;
+    border-width: thin;
+    color: #808080;
+}
+
+.arrowsidemenu div a:hover{
+	background-position: 100% -32px;
+}
+
+.arrowsidemenu div.unselected a {
+    /*header that's currently not selected*/
+    color: #333333;
+}
+
+	
+.arrowsidemenu div.selected a {
+    /*header that's currently selected*/
+    color: #333333;
+    background-position: 100% -64px;
+}
+
+.arrowsidemenu ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.arrowsidemenu ul li{
+	border-bottom: 1px solid #a1c67b;
+}
+
+
+.arrowsidemenu ul li a {
+    /*sub menu links*/
+    display: block;
+    font: normal 12px Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+    padding-left: 10px;
+    border-left: 10px double #a1c67b;
+    border-left-style: groove;
+    border-left-color: #C0C0C0;
+}
+
+.arrowsidemenu ul li a:hover {
+    background: #C0C0C0;
+}
